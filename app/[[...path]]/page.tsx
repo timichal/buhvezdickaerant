@@ -150,6 +150,15 @@ async function fetchAndTransform(path: string) {
       }
     });
 
+    // Add non-breaking spaces after one-letter words in h2, h3, and p tags
+    $('h2, h3, p, footer').contents().each((_, node) => {
+      if (node.type === 'text' && node.data) {
+        // Replace space after one-letter words with non-breaking space
+        // Matches: word boundary + single letter + one or more spaces
+        node.data = node.data.replace(/\b([a-zA-ZáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ])\s+/g, '$1\u00A0');
+      }
+    });
+
     return $.html();
   } catch (error) {
     console.error('Error fetching page:', error);
