@@ -76,7 +76,7 @@ async function fetchAndTransform(path: string) {
           opacity: 0.7;
         }
           footer {
-          margin-top: 2em;
+           margin-top: 2em;
           font-style: italic;
           }
       </style>
