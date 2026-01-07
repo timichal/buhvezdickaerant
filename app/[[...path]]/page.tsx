@@ -63,8 +63,8 @@ async function fetchAndTransform(path: string) {
        font-size: larger;
       }
        .art-header {
-       display:flex;
-       justify-content:space-between;
+        display:flex;
+        justify-content:space-between;
        }
         a {
           text-decoration: underline;
