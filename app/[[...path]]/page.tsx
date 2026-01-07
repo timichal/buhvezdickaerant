@@ -166,6 +166,8 @@ async function fetchAndTransform(path: string) {
   }
 }
 
+export const revalidate = 86400 // 1d
+
 export default async function Page({ params }: PageProps) {
   const resolvedParams = await params;
   const path = resolvedParams.path ? '/' + resolvedParams.path.join('/') : '/';
