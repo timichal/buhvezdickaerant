@@ -57,7 +57,7 @@ async function fetchAndTransform(path: string) {
       font-style: italic;
     }
       .tags {
-      display:flex;
+       display:flex;
       flex-wrap:wrap;
        gap: 0 1rem;
        font-size: larger;
