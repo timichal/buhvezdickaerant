@@ -58,7 +58,8 @@ async function fetchAndTransform(path: string) {
     }
       .tags {
       display:flex;
-       gap: 1rem;
+      flex-wrap:wrap;
+       gap: 0 1rem;
        font-size: larger;
       }
        .art-header {
